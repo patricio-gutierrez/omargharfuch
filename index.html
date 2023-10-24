@@ -19,6 +19,7 @@
       src="https://kit.fontawesome.com/ca4f36b197.js"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/main.js"></script>
     <title>
       Omar Hamid García Harfuch - Candidato a la Gobernatura de la Ciudad de
       México
@@ -27,57 +28,126 @@
   <body>
     <!-- Main Header w/Navbar and Hero -->
     <header class="main-header">
-      <!--Social Links -->
-      <address class="social">
-        <a class="social__ social--white" href="#">Facebook</a>
-        <a class="social social--white" href="#">Twitter</a>
-        <a class="social social--white" href="#">Instagram</a>
-      </address>
+      <div class="container">
+        <!--Social Links -->
+        <section class="socials">
+          <ul>
+            <li>
+              <a href="https://twitter.com/OHarfuch" target="_blank"
+                ><i class="fa-brands fa-x-twitter fa-xl"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/OGHarfuch" target="_blank"
+                ><i class="fa-brands fa-facebook fa-xl"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/omargharfuch/" target="_blank"
+                ><i class="fa-brands fa-instagram fa-xl"></i
+              ></a>
+            </li>
+          </ul>
+        </section>
+      </div>
       <!-- Horizontal Line -->
-      <div class="horizontal-line">Linea</div>
-      <!-- Logo -->
-      <h1 class="h1">Omar García Harfush</h1>
+      <div class="horizontal-line"></div>
+
       <!-- Navigation Links -->
-      <nav>
-        <ul class="primary-nav">
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Página Principal</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Sobre Nosotros</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Campaña</a>
-          </li>
-          <li class="primary-nav__item">
-            <a class="primary-nav__link" href="#">Contacto</a>
-          </li>
-        </ul>
-        <button>Boton responsivo</button>
+      <nav class="navbar">
+        <!-- Logo -->
+        <h1 class="logo text-xxl">Omar García Harfuch</h1>
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="#">Página Principal</a>
+            </li>
+            <li class="primary-nav__item">
+              <a href="#">Sobre Nosotros</a>
+            </li>
+            <li class="primary-nav__item">
+              <a href="#">Campaña</a>
+            </li>
+            <li class="primary-nav__item">
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hamburger Button -->
+        <button id="hamburguer-button" class="hamburguer-button">
+          <div class="hamburguer-line"></div>
+          <div class="hamburguer-line"></div>
+          <div class="hamburguer-line"></div>
+        </button>
+        <div class="mobile-menu active">
+          <ul class="">
+            <li>
+              <a href="#">Página Principal</a>
+            </li>
+            <li class="primary-nav__item">
+              <a href="#">Sobre Nosotros</a>
+            </li>
+            <li class="primary-nav__item">
+              <a href="#">Campaña</a>
+            </li>
+            <li class="primary-nav__item">
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
       </nav>
+
       <!-- Hero Section -->
       <section class="hero">
-        <h2 class="hero__title">La Esperanza y la Transformación Continuan</h2>
-        <p class="hero__text">
-          Proceso para la definición de la coordinación de defensa de la
-          transformación en la Ciudad de México
-        </p>
-        <a class="hero__button btn btn--primary" href="#">Saber Más</a>
+        <div class="container">
+          <h2 class="text-xxl">La Esperanza y la Transformación Continuan</h2>
+          <p class="text-xl">
+            Proceso para la definición de la coordinación de defensa de la
+            transformación en la Ciudad de México
+          </p>
+          <a class="btn btn-primary" href="#">Saber Más</a>
+        </div>
       </section>
-      <!-- Background Image -->
-      <img
-        class="img img--bg"
-        src="./images/principal-bg.webp"
-        alt="Omar García Harfuch"
-      />
     </header>
-    <!-- <main>
-      <p>
-        Si consolidamos la estrategia de seguridad, si erradicamos la
-        desigualdad y garantizamos bienestar a mujeres, jóvenes, niñas, niños y
-        adultos mayores, estoy seguro de que vamos a hacer de nuestra capital,
-        la Ciudad más segura de Latam. Se puede y lo vamos a hacer.
-      </p>
-    </main> -->
+
+    <main>
+      <section class="hashtag">
+        <h3>#ElBuenoEsHarfuch</h3>
+      </section>
+      <section class="information">
+        <div>
+          <p class="text-xl">
+            "Los jóvenes son el corazón de la Ciudad, Son imaginación,
+            crecimiento, creatividad y futuro, por eso les dejo mi compromiso
+            para apoyarlos en su desarrollo, para escucharlos y seguir
+            construyendo juntos ante cualquier adversidad."
+          </p>
+          <p class="text-xl">
+            "Si consolidamos la estrategia de seguridad, si erradicamos la
+            desigualdad y garantizamos bienestar a mujeres, jóvenes, niñas,
+            niños y adultos mayores, estoy seguro de que vamos a hacer de
+            nuestra capital, la Ciudad más segura de Latam. Se puede y lo vamos
+            a hacer."
+          </p>
+        </div>
+        <div>
+          <img
+            src="images/omar-1.webp"
+            alt="Foto de Omar García con seguidores"
+            class="img"
+          />
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>Este sitio web no es oficial</p>
+        <p>
+          Creado con <i class="fa-solid fa-heart"></i> por
+          <a href="https://patriciog.com/">https://patriciog.com/</a>
+        </p>
+        <p>&copy; Copyright 2023. Todos los Derechos Reservados.</p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,288 @@
+/* Global Rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow-x: none;
+}
+
+.text-xl {
+  font-size: 1.7rem;
+}
+
+.text-xxl {
+  font-size: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-primary {
+  background-color: #de2859;
+}
+
+.btn-primary:hover {
+  background-color: #fff;
+  color: #de2859;
+}
+
+/* Header & Background Image */
+.main-header {
+  /* Sizing */
+  width: 100%;
+  height: 95vh;
+
+  /* Flexbox */
+  display: flex;
+  flex-direction: column;
+
+  /* Text Color */
+  color: #fff;
+
+  /* Background Image */
+  background-image: linear-gradient(
+      rgba(185, 30, 72, 0.6),
+      rgba(185, 30, 72, 0.6)
+    ),
+    url("../images/principal-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Social Icons */
+.socials ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials ul li a {
+  display: block;
+  color: #fff;
+  margin: 20px 20px 10px 20px;
+  transition: 0.5s;
+}
+
+.socials ul li a:hover {
+  color: #de2859;
+}
+
+/* Horizontal Line */
+.horizontal-line {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #fff;
+}
+
+/* Navbar & Navigation*/
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.navbar .main-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 15px;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+  color: #de2859;
+}
+
+.logo {
+  text-transform: uppercase;
+}
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 45px;
+}
+
+.hero h2 {
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  padding-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero .btn-primary {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* Hashtag Section */
+.hashtag {
+  background-color: #b91e48;
+  width: 100%;
+}
+
+.hashtag h3 {
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 4rem;
+}
+
+/* Information Section */
+.information {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.information p {
+  color: #b91e48;
+  font-weight: 500;
+  text-align: center;
+  padding: 0 80px;
+}
+
+.information p:first-child {
+  margin-bottom: 25px;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #b91e48;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Hamburguer Button */
+.hamburguer-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.hamburguer-button .hamburguer-line {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 10;
+  background-color: #b91e48;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  margin-top: 130px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.main-menu ul li a {
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .navbar .hamburguer-button {
+    display: block;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .information {
+    grid-template-columns: 1fr;
+  }
+
+  .hashtag h3 {
+    font-size: 2rem;
+  }
+}
